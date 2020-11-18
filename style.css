@@ -1,0 +1,161 @@
+﻿
+@font-face {
+    font-family: ultra-header-font; /* For biggest headers on pages */
+    src: url("assets/fonts/Gilroy-thin.otf");
+}
+
+@font-face {
+    font-family: header-font;
+    src: url("assets/fonts/Gilroy-bold.otf");
+}
+
+@font-face {
+    font-family: content-font;
+    src: url("assets/fonts/Gilroy-thin.otf");
+}
+
+@font-face {
+    font-family: underhead-font;
+    src: url("assets/fonts/Gilroy-bold.otf");
+}
+
+:root {
+    --scrolled: 0px;
+    --scrolledNum: 0;
+}
+
+body {
+    margin: 0;
+    font-family: content-font, sans-serif;
+}
+
+.welcome {
+    /*    background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/40/Panor%C3%A1mica_Oto%C3%B1o_Alc%C3%A1zar_de_Segovia.jpg");
+    background-position: center;
+    background-size: cover;  */
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 10px black;
+    font-family: ultra-header-font, sans-serif;
+    opacity: calc(1 - var(--scrolledNum) / 300);
+}
+
+.BG {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    height: 100vh;
+    width: 100vw; 
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/40/Panor%C3%A1mica_Oto%C3%B1o_Alc%C3%A1zar_de_Segovia.jpg");
+    background-size: cover;
+    animation: introBGmove 10s;
+    animation-timing-function: ease-out;
+}
+
+.welcome bigtext {
+    font-size: 8vw;
+    font-variant: small-caps;
+}
+
+.welcome undertext {
+    font-size: 2vw;
+    font-family: underhead-font, sans-serif;
+}
+
+.welcome .examplepamatkadesc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.welcome .examplepamatkadesc .header {
+    font-size: 2vw;
+}
+
+head1 {
+    font-size: 10vw;
+
+    display: block;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    font-family: header-font, sans-serif;
+}
+
+underhead {
+    font-size: 3vmax;
+    display: block;
+    font-family: content-font, sans-serif;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2vw;
+}
+
+.cards div {
+    margin: 1vw;
+    flex: 1 1 25vh;
+    background: white;
+
+}
+
+.cards:not(.navigation-cards) div head1 {
+    color: white;
+    padding: 0;
+    background: no-repeat;
+    background-size: cover;
+}
+
+.cards div underhead {
+    padding: 1vw;
+}
+
+.cards:not(.navigation-cards) div head1inner {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.9979342078628326) 0%, rgba(0,0,0,0) 100%);
+    -webkit-box-shadow: inset 0px 0px 0px 0 rgba(255,255,255,0.49); 
+    box-shadow: inset 0px 0px 0px 0 rgba(255,255,255,0.49);
+    transition: box-shadow 0.2s;
+    padding: 2vw;
+    padding-top: 30vh;
+    padding-bottom: 5vh;
+    display: block;
+}
+
+.cards:not(.navigation-cards) div head1inner:hover {
+    -webkit-box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,0.49);
+    box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,0.49);
+    background-size: cover 150%;
+}
+.navigation-cards div {
+    padding: 2vw; 
+}
+
+.cards div.map {
+    flex: 1 1 35vw !important;
+}
+
+
+
+@media all and (orientation:landscape) {
+    head1 {
+        font-size: 3vw;
+    }
+
+    underhead {
+        font-size: 1.5vw;
+    }
+
+    .cards div {
+        width: 30vw;
+    }
+}

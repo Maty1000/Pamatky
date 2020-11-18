@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="cs">
+<head>
+    <meta charset="utf-8" />
+    <title>Památky</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="cards.js" defer></script>
+    <script src="data.js"></script>
+    <script src="script.js" charset="utf-8" defer></script>
+    <script type="text/javascript" src="https://api.mapy.cz/loader.js"></script>
+    <script type="text/javascript">
+        Loader.load();
+    </script>
+</head>
+<body>
+    <div class="BG" id="BG"></div>
+    <div class="welcome" id="welcome">
+        <layoutassist>
+            <bigtext>Nezapomenuté památky Prahy</bigtext><br>
+            <undertext>Památky Prahy, na které se dosud blilo</undertext>
+
+            <div class="examplepamatkadesc">
+                <div class="header" id="test">Test</div>
+            </div>
+        </layoutassist>
+    </div>
+    <div class="cards navigation-cards">
+        <div class="card map">
+            <head1>
+                Najít na mapě
+            </head1>
+            <underhead>Klikněte na špendlík na mapě, nebo památku vyhledejte níže</underhead>
+            <div id="map" style="height:380px"></div>
+
+        </div>
+        <div class="card find">
+            <head1>
+                Hledat
+            </head1>
+            <underhead>Bude tu hledání podle názvu.</underhead>
+        </div>
+    </div>
+     <div class="cards" id="cards">
+            <br>
+    </div>
+</body>
+</html>
